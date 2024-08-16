@@ -2,26 +2,20 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: [
-    './src/**/*.{js,jsx,ts,tsx}', // Adjust the path according to your project
+    './src/**/*.{js,jsx,ts,tsx}', 
   ],
-  darkMode: 'class', // or 'media' if you prefer to use media queries
+  darkMode: 'class', 
   theme: {
     extend: {
       colors: {
         'primary': '#ee0181',
-        // 'aadi': '#01ee91'
-        'dark-bg': '#1a202c', // Example dark background color
-        'light-bg': '#f7fafc', // Example light background color
+        'dark-bg': '#1a202c',
+        'light-bg': '#f7fafc',
       },
-
-      padding: {
-        'placeholder-left': '0.5rem', // Custom padding for placeholder
-      },
-
       fontFamily: {
         'display': ['Roboto', 'sans-serif'],
-        'body': ['Inter', 'sans-sarif']
-      }
+        'body': ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [

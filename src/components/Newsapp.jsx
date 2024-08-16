@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
-
-
-const Newsapp = ({ search }) => {
+const Newsapp = ({ search, theme }) => {
     const [newsData, setNewsData] = useState(null);
 
     // Fetch news data
@@ -22,7 +20,7 @@ const Newsapp = ({ search }) => {
     return (
         <div className={'h-full flex justify-center items-center text-white'}>
             <div className=''>
-                {newsData ? <Card data={newsData} /> : <p className="m-3 p-3">No news available. Look through some</p>}
+                {newsData ? <Card data={newsData} theme={theme} /> : <p className="m-3 p-3">No news available. Look through some</p>}
             </div>
         </div>
     );

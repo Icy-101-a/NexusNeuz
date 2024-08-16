@@ -8,7 +8,6 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [theme, setTheme] = useState('light'); // 'light' or 'dark'
   
-
   const handleSearchChange = (newSearch) => {
     setSearch(newSearch);
   };
@@ -27,14 +26,14 @@ const App = () => {
   }, [theme]);
 
   return (
-    <div className={`text-${theme === 'dark' ? 'white' : 'black'}`}>
+    <div className={`app ${theme}`}>
       <Navbar 
         onSearchChange={handleSearchChange}
         onSearchSubmit={handleSearchSubmit}
         toggleTheme={toggleTheme}
         currentTheme={theme}
       />
-      <Newsapp search={searchTerm} />
+      <Newsapp search={searchTerm} theme={theme}/>
     </div>
   );
 }

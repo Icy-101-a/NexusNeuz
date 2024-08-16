@@ -1,3 +1,7 @@
+make a .env file and put your API key in this format
+VITE_API_KEY=Your_API_key
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
